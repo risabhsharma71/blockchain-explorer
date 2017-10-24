@@ -1,0 +1,25 @@
+{
+	"network-config": {
+		"orderer": [{
+			"url": "grpc://127.0.0.1:7050",
+			"server-hostname": "orderer.example.com"
+		}
+		],
+		"org1": {
+			"name": "peerOrg1",
+			"mspid": "Org1MSP",
+			"ca": "http://127.0.0.1:7054",
+			"peer1": {
+				"requests": "grpc://127.0.0.1:7051",
+				"events": "grpc://127.0.0.1:7053",
+				"server-hostname": "peer0.org1.example.com"
+			},
+			
+			"admin": {
+				"key": "/fabric-docker-compose-svt/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore",
+				"cert": "/fabric-docker-compose-svt/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts"
+			}
+		}
+
+		}
+	}
